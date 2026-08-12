@@ -182,6 +182,7 @@ ostree-rechunk $target_image=image_name $tag=default_tag:
       --pull=never \
       --privileged \
       -v "/var/lib/containers:/var/lib/containers" \
+      -v /var/tmp:/var/tmp \ # duong add
       --entrypoint /usr/bin/rpm-ostree \
       "${RPM_OSTREE_CHUNKER_IMAGE}" \
       compose build-chunked-oci \
